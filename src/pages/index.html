@@ -5,16 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-white">
+    <style>
+        .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+        }
+
+        .hover-underline-animation::after {
+        content: '';
+        position: absolute;
+        border-radius: 5px;
+        width: 30%;
+        transform: scaleX(0);
+        height: 5px;
+        bottom: -5px;
+        left: 35%;
+        background-color: white;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        }
+
+        .hover-bolder {
+            position: relative;
+        }
+        .hover-bolder:hover{
+            text-shadow: 0 0.015em #fefefe,0 -0.015em #fefefe,0.01em 0 #fefefe,-0.01em 0 #fefefe;
+        }
+    </style>
+    <div class="bg-white font-montserrat">
         <nav class="bg-primary h-24 mt-4 flex justify-between items-center">
             <a href="#"><img class="h-36 w-auto overflow-hidden pl-4" src="./../components/text-logo.png" alt="piresia-logo"></a>
-            <div class="capitalize text-white space-x-36 mr-9 ">
-                <a href="#">home</a>
-                <a href="#">courses</a>
-                <a href="#">pricing</a>
-                <a class="rounded-3xl bg-secondary py-3 px-12" href="#">
+            <div class="capitalize text-white space-x-36 mr-9 relative">
+                <a class="hover-underline-animation hover-bolder" href="#">home</a>
+                <a class="hover-underline-animation hover-bolder" href="#">courses</a>
+                <a class="hover-underline-animation hover-bolder" href="#">pricing</a>
+                <a class="rounded-3xl bg-secondary hover:bg-litegreen hover:text-slate-700 hover:scale-105 ease-in-out py-3 px-12" href="#">
                     sign up
                 </a>
             </div>
@@ -27,18 +61,18 @@
                 <img width="680" height="500" class="absolute left-9 top-32" src="./../components/perisia-owl.png" alt="perisia-owl-img">
             </div>
 
-            <div class="block p-10 mt-10 text-left">
+            <div class="block p-10 mt-10 text-left font-montserrat">
                 <h1 style="width: 24rem;" class="font-semibold text-5xl text-start">
                     Learn from the
                     <span class="text-secondary"> professionals </span>
                     today
                 </h1>
                 <p class="mt-6 font-medium text-start text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, eum dolor officia totam, nulla debitis eaque suscipit voluptates natus corrupti quasi optio sit obcaecati id culpa excepturi vitae nihil molestias!</p>
-                <div class="mt-12">
-                    <a class="bg-secondary rounded-full py-4 px-14 text-center font-medium text-lg text-white shadow-lg" href="#">
+                <div class="mt-12 font-montserrat">
+                    <a class="bg-secondary hover:bg-emerald-700 hover:text-slate-700 rounded-full py-4 px-14 text-center font-semibold text-lg text-white shadow-lg" href="#">
                         Sign up
                     </a>
-                    <a class="bg-litegreen border-solid border-2 border-black shadow-lg font-medium text-center text-lg rounded-3xl py-3 px-14 ml-9" href="#">
+                    <a class="bg-litegreen border-solid border-2 hover:bg-emerald-700 border-black shadow-lg font-semibold text-center text-lg rounded-3xl py-3 px-14 ml-9" href="#">
                         See courses
                     </a>
                 </div>

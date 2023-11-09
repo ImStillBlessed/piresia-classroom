@@ -21,7 +21,14 @@ module.exports = {
       gray: colors.coolGray,
       slate: colors.blueGray,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'manrope': ['Manrope'],
+        'montserrat': ['Montserrat'],
+        'lato': ['Lato'],
+        'garamond': ['Garamond']
+      }
+    },
   },
   plugins: [],
 }
